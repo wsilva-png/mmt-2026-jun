@@ -102,7 +102,51 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#fff;overflow-x:
     <div class="form-card" style="background:transparent;border:none;padding:0">
 <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
 <style>
-#_form_1_{font-size:14px;line-height:1.6;font-family:arial,helvetica,sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_1_ input[type="text"],#_form_1_ input[type="tel"],#_form_1_ input[type="date"],#_form_1_ textarea{padding:12px;height:auto;border:#7B2FBE 1px solid;border-radius:4px;color:#fff !important;background:rgba(255,255,255,.04)!important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_1_ input::placeholder{color:#888}#_form_1_ ._submit{cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-align:center;background:#7B2FBE !important;border:0 !important;border-radius:4px !important;color:#FFFFFF !important;padding:13px !important;width:100%}#_form_1_ ._submit:hover{background:#B060FF !important}#_form_1_{position:relative;text-align:left;margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:transparent !important;border:0;max-width:500px;border-radius:0;color:#fff}#_form_1_ ._form-label,#_form_1_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block;color:#ccc}#_form_1_ ._form_element{position:relative;margin-bottom:10px;max-width:100%}#_form_1_ ._form_element input[type="text"],#_form_1_ ._form_element select,#_form_1_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_1_ ._form-title,#_form_1_ ._html-code :is(h1,h2,h3,h4,h5,h6){display:none}#_form_1_ ._html-code p{display:none}#_form_1_ ._form-branding{display:none!important}#_form_1_ ._error{display:block;position:absolute;font-size:12px;z-index:10000001;background:#FFDDDD;padding:6px 10px;border-radius:4px;color:#900}#_form_1_ ._form-thank-you{text-align:center;font-size:18px;color:#B060FF;padding:20px 0}
+#_form_1_{font-size:14px;line-height:1.6;font-family:'Barlow',sans-serif;margin:0;box-shadow:none;position:relative;text-align:left;padding:0;background:transparent !important;border:0;max-width:500px;border-radius:0;color:#fff}
+#_form_1_ ._form-content{display:flex;flex-direction:column;gap:14px}
+#_form_1_ ._form-label,#_form_1_ ._form_element ._form-label{display:none !important}
+#_form_1_ ._form_element{position:relative;margin:0;max-width:100%}
+#_form_1_ input[type="text"],#_form_1_ input[type="tel"],#_form_1_ input[type="email"],#_form_1_ input[type="date"],#_form_1_ select,#_form_1_ textarea{
+  display:block;width:100%;padding:16px 20px;height:auto;
+  border:1.5px solid #7B2FBE !important;border-radius:6px;
+  color:#fff !important;background:rgba(13,13,30,.55)!important;
+  font-size:14px;font-family:'Barlow',sans-serif;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+  -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
+  -webkit-appearance:none;appearance:none;
+}
+#_form_1_ input:focus,#_form_1_ select:focus,#_form_1_ textarea:focus{border-color:#B060FF !important;box-shadow:0 0 0 3px rgba(176,96,255,.15)}
+#_form_1_ input::placeholder{color:#9a9aa8;opacity:1}
+#_form_1_ ._submit{
+  cursor:pointer;display:block;width:100%;
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;text-align:center;
+  background:#7B2FBE !important;border:0 !important;border-radius:6px !important;
+  color:#fff !important;padding:16px 13px !important;
+  transition:background .2s,transform .1s;
+}
+#_form_1_ ._submit:hover{background:#B060FF !important}
+#_form_1_ ._submit:active{transform:scale(.98)}
+#_form_1_ ._submit b,#_form_1_ ._submit strong{font-weight:800;color:#fff;background:linear-gradient(90deg,rgba(176,96,255,.55),rgba(155,79,222,.45));padding:2px 6px;border-radius:3px;margin-left:6px}
+#_form_1_ ._phone-wrapper{display:flex;gap:8px;align-items:stretch}
+#_form_1_ ._phone-wrapper ._ddi-select{
+  flex:0 0 110px;width:110px;padding:16px 8px 16px 14px;
+  border:1.5px solid #7B2FBE !important;border-radius:6px;
+  background:rgba(13,13,30,.55) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23b060ff' d='M0 0l5 6 5-6z'/></svg>") no-repeat right 10px center !important;
+  color:#fff !important;font-size:14px;font-family:'Barlow',sans-serif;
+  outline:none;cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+  box-sizing:border-box;
+}
+#_form_1_ ._phone-wrapper ._ddi-select option{background:#0d0d1a;color:#fff}
+#_form_1_ ._phone-wrapper #phone_number{flex:1 1 auto;min-width:0}
+#_form_1_ ._phone-wrapper ._ddi-select:focus{border-color:#B060FF !important;box-shadow:0 0 0 3px rgba(176,96,255,.15)}
+#_form_1_ ._form-title,#_form_1_ ._html-code :is(h1,h2,h3,h4,h5,h6){display:none}
+#_form_1_ ._html-code p{display:none}
+#_form_1_ ._form-branding{display:none!important}
+#_form_1_ ._button-wrapper{margin-top:4px !important}
+#_form_1_ ._error{display:block;position:absolute;font-size:12px;z-index:10000001;background:#FFDDDD;padding:6px 10px;border-radius:4px;color:#900}
+#_form_1_ ._form-thank-you{text-align:center;font-size:18px;color:#B060FF;padding:20px 0}
 </style>
 <form method="POST" action="https://guesferramentas.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form _dark" novalidate data-styles-version="5">
   <input type="hidden" name="u" value="1" />
@@ -117,19 +161,44 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#fff;overflow-x:
     <div class="_form_element _field_name _full_width">
       <label for="fullname" class="_form-label">Nombre completo</label>
       <div class="_field-wrapper">
-        <input type="text" id="fullname" name="fullname" placeholder="Tu nombre" />
+        <input type="text" id="fullname" name="fullname" placeholder="su nombre" />
       </div>
     </div>
     <div class="_form_element _field_email _full_width">
       <label for="email" class="_form-label">Email <span style="color:#ff4444">*</span></label>
       <div class="_field-wrapper">
-        <input type="text" id="email" name="email" placeholder="Tu correo electrónico" required/>
+        <input type="text" id="email" name="email" placeholder="tu correo electrónico" required/>
       </div>
     </div>
     <div class="_form_element _x51682008 _full_width">
       <label for="phone" class="_form-label">Teléfono</label>
-      <div class="_field-wrapper">
-        <input type="text" id="phone" name="phone" placeholder="Tu número de teléfono" />
+      <div class="_field-wrapper _phone-wrapper">
+        <select id="phone_ddi" aria-label="Código de país" class="_ddi-select">
+          <option value="+52" data-flag="🇲🇽" selected>🇲🇽 +52</option>
+          <option value="+54" data-flag="🇦🇷">🇦🇷 +54</option>
+          <option value="+591" data-flag="🇧🇴">🇧🇴 +591</option>
+          <option value="+55" data-flag="🇧🇷">🇧🇷 +55</option>
+          <option value="+56" data-flag="🇨🇱">🇨🇱 +56</option>
+          <option value="+57" data-flag="🇨🇴">🇨🇴 +57</option>
+          <option value="+506" data-flag="🇨🇷">🇨🇷 +506</option>
+          <option value="+53" data-flag="🇨🇺">🇨🇺 +53</option>
+          <option value="+593" data-flag="🇪🇨">🇪🇨 +593</option>
+          <option value="+503" data-flag="🇸🇻">🇸🇻 +503</option>
+          <option value="+34" data-flag="🇪🇸">🇪🇸 +34</option>
+          <option value="+1" data-flag="🇺🇸">🇺🇸 +1</option>
+          <option value="+502" data-flag="🇬🇹">🇬🇹 +502</option>
+          <option value="+504" data-flag="🇭🇳">🇭🇳 +504</option>
+          <option value="+505" data-flag="🇳🇮">🇳🇮 +505</option>
+          <option value="+507" data-flag="🇵🇦">🇵🇦 +507</option>
+          <option value="+595" data-flag="🇵🇾">🇵🇾 +595</option>
+          <option value="+51" data-flag="🇵🇪">🇵🇪 +51</option>
+          <option value="+1" data-flag="🇵🇷">🇵🇷 +1 (PR)</option>
+          <option value="+1" data-flag="🇩🇴">🇩🇴 +1 (DO)</option>
+          <option value="+598" data-flag="🇺🇾">🇺🇾 +598</option>
+          <option value="+58" data-flag="🇻🇪">🇻🇪 +58</option>
+        </select>
+        <input type="text" id="phone_number" placeholder="tu número de teléfono" inputmode="tel" autocomplete="tel-national" />
+        <input type="hidden" id="phone" name="phone" value="" />
       </div>
     </div>
     <input type="hidden" id="field[2]" name="field[2]" value="" />
@@ -139,13 +208,29 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#fff;overflow-x:
     <input type="hidden" id="field[6]" name="field[6]" value="" />
     <div class="_button-wrapper _full_width" style="margin-top:6px">
       <button id="_form_1_submit" class="_submit" type="submit">
-        Quiero participar en las trampas del trading
+        Quiero participar en <b>Las Trampas del Trading</b>
       </button>
     </div>
     <div class="_clear-element"></div>
   </div>
   <div class="_form-thank-you" style="display:none;"></div>
 </form>
+<script>
+(function(){
+  var form=document.getElementById('_form_1_');
+  if(!form)return;
+  var ddi=document.getElementById('phone_ddi');
+  var num=document.getElementById('phone_number');
+  var hidden=document.getElementById('phone');
+  function sync(){
+    var n=(num.value||'').replace(/[^\d]/g,'');
+    hidden.value = n ? (ddi.value+' '+n) : '';
+  }
+  ddi.addEventListener('change',sync);
+  num.addEventListener('input',sync);
+  form.addEventListener('submit',sync,true);
+})();
+</script>
   </div>
 </section>
 
